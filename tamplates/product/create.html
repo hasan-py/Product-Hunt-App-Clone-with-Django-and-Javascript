@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<br>
+<h1>Create Product</h1>
+<br>
+
+<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+	{% csrf_token %}
+	<div class="container">
+		<div class="row">
+			<div class="col-8">
+
+	<!-- when password doesn't matched and username already taken -->
+	 <p  style="color:red;">{{ error }}<br></p>
+
+	
+	Title: <br><input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" placeholder="Enter Your Username" name="title">
+
+	Body: <br><input type="textbox" class="form-control shadow p-3 mb-5 bg-white rounded" name="body" placeholder="Enter Your Descriptions">
+
+	Url: <br><input type="textbox" class="form-control shadow p-3 mb-5 bg-white rounded" name="url" placeholder="Enter Your Url">
+
+	Icon: <br><input type="file" class="form-control shadow p-3 mb-5 bg-white rounded" name="icon" >
+
+	Image: <br><input type="file" class="form-control shadow p-3 mb-5 bg-white rounded" name="image" >
+
+	<input class="btn btn-outline-dark" type="submit" value="Upload Product" >
+			</div>
+
+		<div class="col-4"></div>
+
+
+	</div>
+	</div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

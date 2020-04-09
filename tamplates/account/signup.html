@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+<br>
+<h1>Signup</h1>
+<br>
+
+<form method="POST" action="{% url 'signup' %}">
+	{% csrf_token %}
+	<div class="container">
+		<div class="row">
+			<div class="col-8">
+
+	<!-- when password doesn't matched and username already taken -->
+	 <p  style="color:red;">{{ error }}<br></p>
+
+	
+	Username: <br><input type="text" class="form-control shadow p-3 mb-5 bg-white rounded" placeholder="Username" name="Username">
+	Password: <br><input type="password" class="form-control shadow p-3 mb-5 bg-white rounded" name="Password1" placeholder="Password">
+	Confirm Password: <br><input type="password" class="form-control shadow p-3 mb-5 bg-white rounded" name="Password2" placeholder="Confirm Password">
+	<input class="btn btn-outline-dark" type="submit" value="Signup" >
+			</div>
+
+		<div class="col-4"></div>
+
+
+	</div>
+	</div>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
