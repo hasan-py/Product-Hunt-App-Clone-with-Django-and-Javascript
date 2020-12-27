@@ -1,0 +1,22 @@
+.flow {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body-flow {
+  height: 40rem;
+  width: 70%;
+  background-color: rgba(229, 231, 235, 1);
+  --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+    var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.title {
+  font-weight: bold;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
+}
